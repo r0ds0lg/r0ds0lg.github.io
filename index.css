@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: rgb(35, 3, 44);
+    text-decoration: none
+}
+
+.title {
+    color: whitesmoke;
+    text-align: center;
+}
+h1, h2 {
+    background-color: rgb(65, 63, 80);
+    text-transform: capitalize;
+    text-shadow: 2px 2px 7px rgb(42, 33, 51);
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+img {
+    width: 20px;
+    border-radius: 25px;
+}
+h1, h2, p, a, figcaption {
+    font-family: 'Fahkwang', sans-serif;
+}
+p.intro:first-letter {
+    font-size: 150%;
+}
+
+.correo {
+    width: 25px;
+}

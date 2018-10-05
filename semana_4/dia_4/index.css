@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.title {
+    color: whitesmoke;
+    text-align: center;
+}
+h1 {
+    background-color: darkslateblue;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 7px #111111;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+img {
+    width: 100px;
+    border-radius: 25px;
+}
+h1, p, figcaption {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p.intro:first-letter {
+    font-size: 150%;
+}
