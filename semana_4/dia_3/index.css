@@ -28,9 +28,19 @@ h1 {
 
 input {
     width: 100%;
+    border-top-right-radius: 15px 25px;
 }
 
-input, button {
+button {
+    border-radius: 10px;
+    align-content: center;
+    padding: 11px;
+    margin: 10px 5px;
+    color: gray;
+    font-size: 30px;
+}
+
+input {
     align-content: center;
     padding: 5px, 10px;
     margin: 10px 5px;

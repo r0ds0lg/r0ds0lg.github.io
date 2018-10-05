@@ -2,10 +2,10 @@
     box-sizing: border-box;
 }
 
-a {
+/* a {
     color: rgb(35, 3, 44);
     text-decoration: none
-}
+} */
 
 .title {
     color: whitesmoke;
@@ -26,7 +26,7 @@ img {
     width: 20px;
     border-radius: 25px;
 }
-h1, h2, p, a, figcaption {
+h1, h2, p, a, ul, figcaption {
     font-family: 'Fahkwang', sans-serif;
 }
 p.intro:first-letter {
@@ -35,4 +35,30 @@ p.intro:first-letter {
 
 .correo {
     width: 25px;
+}
+
+ul {
+    width: 570px;
+    padding: 15px;
+    margin: 0px auto 0px auto;
+    border-bottom: 1px solid #2d0338;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin: 0px 4px;
+}
+
+a {
+    color: rgb(35, 3, 44);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 18px 5px 18px;
+}
+
+a:hover, a.mouse {
+    color: #3c0452;
+    text-shadow: 2px 2px 7px #312f31;
+    cursor: pointer;
 }
