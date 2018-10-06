@@ -1,0 +1,102 @@
+/* siempre poner el box-sizing: border-box */
+* {
+    box-sizing: border-box; 
+}
+body, input, button {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+p, div {
+    color: white;
+}
+
+#contenedor {
+    width: 510px;
+    margin: 50px auto;
+    background-color: #2e2b29; 
+    padding: 50px 110px;
+    border-radius: 25px
+}
+
+h1 {
+    margin:0;
+    margin-bottom: 10px;
+    color: #eeeeee;
+    text-align: center;
+}
+
+input {
+    align-content: center;
+    text-align: center;
+    padding: 5px, 10px;
+    margin: 10px 5px;
+    color: gray;
+    font-size: 20px;
+    outline-color: #ff4200;
+    border-color: #ff9800;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 15px;
+}
+
+/* icono central de la calculadora */
+.icon {
+    align-content: center;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+/* incono segun el IMC */
+.icon2 {
+    float: left;
+    align-content: center;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+/* botones calcular y limpiar */
+.send, .clear {
+    align-content: center;
+    color: gray;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* boton calcular */
+.send {
+    border-color: #04c0c7;
+    border-width: 2px;
+}
+
+/* boton limpiar */
+.clear {
+    border-color: #02193be9;
+    border-width: 2px;
+    background-color: #024c88;
+    color: whitesmoke;
+}
+
+input:checked + label[for="fem"],
+input:checked + label[for="hom"] {
+    color: #04c0c7;
+}
+
+/* párrafo mensaje segun IMC */
+.msn {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #ff9800;
+}
+
+/* div imagen y mensaje segun sea el calculo */
+.imsn {
+    align-items: stretch;
+}
