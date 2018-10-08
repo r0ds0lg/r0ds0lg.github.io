@@ -13,28 +13,20 @@
             <h1>Calcule % de grasa corporal</h1>
             <img class="icon" src="imagenes/bascula.png">
             <form>
-                <p>Por favor, seleccione su género:
-                    <br />
-                    <input id="fem" type="radio" name="genero" value="femenino">
+                <p>Por favor, seleccione su género:</p>
+                    <input id="fem" type="radio" name="genero" value="femenino" checked>
                     <label for="fem">Femenino</label>
                     <input id="hom" type="radio" name="genero" value="masculino">
                     <label for="hom">Masculino</label>
-                </p>
-                <div>
                     <input class="peso" placeholder="Indique su peso" type="text"> kg
-                    <br />
                     <input class="altura" placeholder="Indique su estatura" type="text"> m
-                    <br />
                     <button class="send">Calcular</button> 
-                    <br />
-                    <input class="calculo" placeholder="% masa corporal" disabled type="text"> % IMC
-                    <br />
                     <button class="clear">Limpiar</button>
-                </div>
+                    <h2 class="resultado-imc"></h2>
             </form>
-            <div class=imsn> 
-                <img class="icon2" src="imagenes/loss-clipart-height-and-weight-10.jpg">
-                <p class="msn"></p> 
+            <div class="imsn"> 
+                   <img>
+                <p align="middle"></p> 
             </div>
         </div>    
     <script src="index.js"></script>

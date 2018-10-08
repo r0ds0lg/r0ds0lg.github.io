@@ -7,87 +7,122 @@
 
 // La formula es  peso(kg) / altura(m) ^ 2
 
-
-//inputs
-let peso = document.querySelector('.peso');
-let altura = document.querySelector('.altura');
-let result = document.querySelector('.calculo');
-
-//Leyenda segun IMC
-let leyenda = document.querySelector('.msn');
-
-//botones
-let calcular = document.querySelector('.send');
-let limpiar = document.querySelector('.clear');
-
-
-function masaCorporal () { 
-    let calculo = parseFloat(peso.value) / parseFloat((altura.value ^ 2));
-    calculo = calculo.toFixed(2);
-    result.value = calculo;
+function procesarForm (e) {
+    e.preventDefault();
+    const peso = +document.querySelector('.peso').value;
+    const altura = +document.querySelector('.altura').value;
     const genero = document.querySelector('input[name="genero"]:checked').value;
-    if (genero === 'femenino') {
-        if (calculo === 10 && calculo <14 ) {
-            document.getElementById('icon2').src="imagenes/green scale.png"
-            leyenda.innerText="Grasa esencial";
-        }
-        if (calculo === 14 && calculo <21 ) {
-            document.getElementById('icon2').src="imagenes/green scale.png"
-            leyenda.innerText="Atleta";
-        }
-        if (calculo === 21 && calculo <25) {
-            document.getElementById('icon2').src="imagenes/green scale.png"
-            leyenda.innerText="En forma";
-        }
-        if (calculo === 25 && calculo <32) {
-            document.getElementById('icon2').src="imagenes/yellow scale.png"
-            leyenda.innerText="Sobrepeso";
-        }
-        if (calculo >=32) {
-            document.getElementById('icon2').src="imagenes/red scale.png"
-            leyenda.innerText="Obesidad";
-        }
-    } 
-    else {
-        if (genero === 'masculino') {
-            if (calculo === 2 && calculo <6 ) {
-                document.getElementById('icon2').src="imagenes/green scale.png"
-                leyenda.innerText="Grasa esencial";
-            }
-            if (calculo === 6 && calculo <14 ) {
-                document.getElementById('icon2').src="imagenes/green scale.png"
-                leyenda.innerText="Atleta";
-            }
-            if (calculo === 14 && calculo <18) {
-                document.getElementById('icon2').src="imagenes/green scale.png"
-                leyenda.innerText="En forma";
-            }
-            if (calculo === 18 && calculo <26) {
-                document.getElementById('icon2').src="imagenes/yellow scale.png"
-                leyenda.innerText="Sobrepeso";
-            }
-            if (calculo >=26) {
-                document.getElementById('icon2').src="imagenes/red scale.png"
-                leyenda.innerText="Obesidad";
-            }
-        }
+    if (camposSonInvalidos(peso, altura)) {
+       ocultarContenedorEvaluacion()
+       borraImc ()
+        
+        return false;
     }
+    const imc = calculoImc(peso, altura);
+    escribeImc(imc);
+    muestraEvaluacionIMC (imc, genero)
+}
+
+function ocultarContenedorEvaluacion () {
+    document.querySelector('.imsn').classList.remove('visible');
 }
  
- function detectarEnter (e) {
-    if (e.key === 'Enter'){
-       masaCorporal() 
+function borraImc () {
+    document.querySelector('.resultado-imc').innerText = '';
+}
+
+function camposSonInvalidos (peso, altura) {
+    if (peso <= 0 || isNaN(peso) || altura <=0 || isNaN(altura)) {
+        return true;
+    }else{
+        return false;
     }
 }
-altura.addEventListener('keyup', detectarEnter);
 
-calcular.addEventListener('click', masaCorporal);
+//función para calcular IMC
+function calculoImc (peso, altura) { 
+    return ( peso / Math.pow(altura, 2) ).toFixed(2);
+}
 
 
- 
+// función para escrbir el IMC en h2
+function escribeImc (texto) {
+    document.querySelector('.resultado-imc').innerText = `${texto}% IMC`;
+}
+
+//funcion rangos
+function rangosPorGenero (genero) {
+    const rangos = {
+        femenino: {
+            esencial: 14,
+            atleta: 21,
+            forma: 25,
+            sobrepeso: 32
+        },
+        masculino: {
+            esencial: 6,
+            atleta: 14,
+            forma: 18,
+            sobrepeso: 26
+        }
+    }
+    //Ternary Operator
+    return genero === 'femenino' ? rangos.femenino : rangos.masculino;
+}
+
+function obtenerCategoria(imc, genero) {
+    const rangoMin = genero === 'femenino' ? 10 : 2;
+
+//cambiar mensaje según el rango al que corresponda el IMC
+    let rangoMax = rangosPorGenero(genero);
+
+    if (imc < rangoMin) {
+        return 'desconocido'
+    } else if (imc < rangoMax.esencial) {
+        return 'esencial';
+    } else if (imc < rangoMax.atleta) {
+        return 'atleta';
+    } else if (imc < rangoMax.forma) {
+        return 'forma';
+    } else if (imc < rangoMax.sobrepeso) {
+        return 'sobrepeso';
+    } else {
+        return 'obesidad';
+    }
+}
+
+function obtenerValoresDeEvaluacion (categoria) {
+    const cambios = {
+        esencial: {img: 'imagenes/yellow-scale.png', leyenda: 'Grasa esencial 👌🏽'},
+        atleta: {img:'imagenes/green-scale.png', leyenda: 'Atleta 🏆'},
+        forma: {img:'imagenes/green-scale.png', leyenda: 'En forma 😎'},
+        sobrepeso: {img:'imagenes/aceptable-img.jpg', leyenda: 'Aceptable 🧐'},
+        obesidad: {img:'imagenes/red-scale.png', leyenda: 'Obesidad 🐷'}
+    }
+    return cambios[categoria];
+}
+
+function muestraEvaluacionIMC (imc, genero) {
+    const categoria = obtenerCategoria (imc, genero); 
+    const valores = obtenerValoresDeEvaluacion (categoria);
+    const contenedorEvaluacion = document.querySelector('.imsn');
+    if (valores) {
+        contenedorEvaluacion.querySelector('img').src = valores.img;
+        contenedorEvaluacion.querySelector('p').innerText = valores.leyenda;
+        contenedorEvaluacion.classList.add('visible'); 
+    } else {
+        contenedorEvaluacion.classList.remove('visible');
+    }
+}
+//DRY Don't repeat yourself 
+function limpiarForm (event) {
+    event.preventDefault();
+    document.querySelector('.peso').value = '';
+    document.querySelector('.altura').value = '';
+    ocultarContenedorEvaluacion ();
+    borraImc();
+}
 
 
- 
-
- 
-
+document.querySelector('form').addEventListener('submit', procesarForm);
+document.querySelector('.clear').addEventListener('click', limpiarForm);
