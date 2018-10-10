@@ -40,8 +40,12 @@ p.intro:first-letter {
     font-size: 150%;
 }
 
-.correo {
-    width: 25px;
+.redes {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    overflow: hidden;
 }
 
 ul {
@@ -71,9 +75,10 @@ a:hover, a.mouse {
     cursor: pointer;
 }
 
-.icon {
-   width: 30px;
-   height: 30px;
-   float: left;
+.icon { 
+    margin: 0 auto;
+    width: 20px;
+    float: center;
+    vertical-align: middle;
 }
 
