@@ -1,0 +1,13 @@
+/* siempre poner el box-sizing: border-box */
+* {
+    box-sizing: border-box; 
+}
+
+h1, h2, h3 {
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+p {
+    opacity: 0;
+    margin: 10px auto;
+}

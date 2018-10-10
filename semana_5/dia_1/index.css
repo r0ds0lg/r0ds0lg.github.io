@@ -1,0 +1,145 @@
+/*
+Displays simples
+
+display: block|inline|inline-block;
+
+block
+    - Respetan margins, paddings, width y height
+      en los 4 lados
+    - Forzan un salto de linea despues del elemento
+    - Si no se especifica width toman el 100% de su
+      contenedor
+
+    Elementos que tienen block por default:
+        div  p  h1-h6  li  pre  header  footer  ...
+
+inline
+    - Respetan margins y paddings solo a 
+      la izquierda y derecha *
+    - width y height son ignorados
+    - Permite otros elementos en la misma linea
+    - se puede alargar el alto con line-height
+
+    Elementos que tienen inline por default:
+        span  a   img  input  button iframe  ...
+
+
+inline-block
+    - Respeta margins, paddings, width y height
+      en los 4 lados
+    - Permite otros elementos en la misma linea
+
+*/
+
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+}
+
+.divLogo {
+ display: block;
+ margin-top: 280px;
+}
+
+#logo {
+  display: block;
+  width: 272px;
+  margin: 0 auto;
+ }
+
+ /* divisor que contiene input buscador e img mirofono */
+.divBuscador {
+  display: block;
+  margin: 0 auto;
+  width: 528px;
+  height: 44px;
+  outline: none;
+  border: solid #dfdfdf;
+  border-width: .5px;
+  border-radius: 2px;
+  box-shadow: 5px 8px 4px -8px #757575;
+  box-shadow: blur-radius;
+}
+
+/* input buscador */
+.searchBx {
+  margin: 5.5px 8.5px;
+  padding: 0;
+  width: 503px;
+  height: 35px;
+  border: none;
+  outline: none;
+  font: 1em;
+}
+
+/* imagen microfono */
+.micro {
+  vertical-align: middle;
+}
+
+/* div botones */
+ #botones {
+   text-align: center;
+   margin: 0 auto;
+   width: 570px;
+   height: 58px;
+}
+
+/* estilo botones */
+button {
+  display: inline;
+  background-color: #f2f2f2;
+  color: #757575;
+  border-radius: 2px;
+  border-color: transparent;
+  font-size: .78em;
+  font-family: Arial, sans-serif;
+  font-weight: bold; 
+  margin: 100px;
+  height: 36px;
+  outline: none;
+  
+}
+
+/* boton Google Search */
+.gSearch {
+  width: 154px;
+ }
+
+ /* boton feeling lucky */
+.lucky {
+  width: 163px;
+ }
+
+/* estilo botones hover */
+button:hover {
+  color: #000000;
+  border: solid;
+  border-color: #dbdada;
+  border-width: .1em;
+}
+
+/* leyenda Google in Language */
+.googleInLaguage {
+  font-size: small;
+  text-align: center;
+  color: #222222;
+}
+
+
+/* div pais 
+.pais {
+  justify-content: left;
+  display: block;
+  margin-left: 30px;
+  text-align: left;
+  color:  gray;
+  padding-left: 27px;
+  margin: 100%;
+  height: 35px;
+  bottom: 0;
+} */
