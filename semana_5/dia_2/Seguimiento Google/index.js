@@ -11,11 +11,11 @@ function busqueda () {
 
 function detectarEnter (e) {
     if (e.key === 'Enter'){
-       suma() 
+       busqueda() 
     }
 }
 
 googleSearch.addEventListener('click', busqueda);
 
 let searching = document.querySelector('.searchBx');
-searching.addEventListener('keyup', detectaEnter(e));
+searching.addEventListener('keyup', detectarEnter);
