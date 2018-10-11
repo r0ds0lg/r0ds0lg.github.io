@@ -4,8 +4,11 @@ let googleSearch = document.querySelector('.gSearch')
 
 function busqueda () {
     let buscar = document.querySelector('.searchBx').value;
-    console.log(buscar)
-    window.location.href="https://www.google.com/search?q=" + buscar
+     if (campoEnBlancoInvalido(buscar) === true) {
+     buscar = " "
+    } else {
+    window.location.href="https://www.google.com/search?q=" + buscar;
+    }
 }
 
 
@@ -19,3 +22,11 @@ googleSearch.addEventListener('click', busqueda);
 
 let searching = document.querySelector('.searchBx');
 searching.addEventListener('keyup', detectarEnter);
+
+function campoEnBlancoInvalido (buscar) {
+    if (buscar === "" || buscar.match(/^ +$/)) {
+        return true;
+    } else {
+        return false;
+    }
+}

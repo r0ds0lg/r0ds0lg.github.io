@@ -38,12 +38,10 @@ inline-block
 body {
   font-family: Arial, sans-serif;
   vertical-align: middle;
-  margin-bottom: 400px;
 }
 
 .divLogo {
- display: block;
- margin-top: 195px;
+ margin-top: 200px;
  margin-bottom: 30px;
 }
 
@@ -134,9 +132,9 @@ a {
 }
 
 span.mexico {
-  display:table-cell;
-  vertical-align:middle;
-  padding: 0 24px;
+  position: absolute;
+  left: 27px;
+  padding: 10px
 }
 
 span:hover {
@@ -177,16 +175,28 @@ span:hover {
   font-weight: bold;
 }
 
-#privacidad {
-    margin-left: 80%;
-  }
 
   .finalD { 
-    position: relative;
-    top: 30%;
-    margin-left: 20px;
+    position: absolute;
+    left: 9px;
+    text-align: left;
+    /* width: 35%;  */
+    padding: 10px;
+   
   }
 
   .finalIz {
-    padding: 0 20px 10px 0px;
+    position: absolute;
+    right: 18px;
+    text-align: right;
+    /* width: 35%; */
+    padding:10px;
+  }
+
+  .privacidad, .terminos, .privacidad {
+    margin-right: 18px;
+  }
+
+  .adver, .business, .about {
+    margin-left: 18px;
   }
