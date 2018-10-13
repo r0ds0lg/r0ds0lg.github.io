@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box; 
+  }
+  
+  body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+  }
+
+/* header barra de menú superior Padre de 
+divisores: mail, images, logo cuadros
+y boton sign in */
+
+.menuSuperior {
+    
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    padding-top: 3px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
+}
+
+div.mail, div.imagenes {
+    padding: 10px;
+    font-size: .80em;
+}
+
+.link:hover {
+    color: rgba(0,0,0,0.54);
+    text-decoration: underline;
+}
+
+#divCuadros {
+    opacity: 0.6;
+    height: 30px;
+    margin: 10px;
+}
+
+
+.inicioSesion {
+    background-color: #2879ec;
+    color: #f2f2f2;
+    border-radius: 2px;
+    border-color: transparent;
+    font-size: .78em;
+    font-weight: bold; 
+    outline: none;
+    margin-right: 20px;
+    /* checa este cambio */
+    margin-left: 8px;
+    height: 35px;
+    width: 109.09px;
+}
+ 
+.inicioSesion:hover {
+    box-shadow: 0 1px 0 rgba(0,0,0,.15);
+
+}
+
+/* divisor Padre de divisores: Logo, Buscador, Parrafo y Botones   */
+   .divPrincipal {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -115px;
+    margin-bottom: -35px;
+  }
+
+/* imagen: Logo GOOGLE   */
+  #logo {
+    width: 272px;
+    margin: 28px;
+   }
+
+/* divisor que contiene input buscador e img mirofono */
+   .divBuscador {
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    outline: none;
+    border: solid #dfdfdf;
+    border-width: .5px;
+    border-radius: 2px;
+    box-shadow: 0px 4px 7px -5px #838282e0;
+  }
+
+/* input buscador */
+  .searchBx {
+    padding: 9px;
+    flex-grow: 1;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+  }
+
+/* divisor que contiene la imagen del microfono */
+  #divMicro {
+      padding-top: 3px;
+      padding-right: 14px
+  }
+
+  /* imagen microfono */
+  .micro {
+    align-items: center;
+    width: 23px;
+  }
+
+/* div botones googleSearch y Feeling lucky */
+#botonesCentrales {
+    text-align: center;
+    margin: 30px auto 10px;
+    width: 570px;
+    height: 58px;
+ }
+
+
+/* estilo botones googleSearch y feeling lucky */
+.gSearch, .lucky {
+    background-color: #f2f2f2;
+    color: #757575;
+    border-radius: 2px;
+    border-color: transparent;
+    font-size: .78em;
+    font-weight: bold; 
+    height: 36px;
+    outline: none;
+    margin: 2px;
+  }
+
+/* estilo botones hover */
+.gSearch:hover, .lucky:hover {
+    color: #000000;
+    border: solid;
+    border-color: #dbdada;
+    border-width: .1em;
+  }
+
+.gSearch:focus, .lucky:focus {
+    outline-style: solid;
+    outline-color: #4d90fe;
+    outline-width: 1px;
+}  
+
+/* Divisor que contiene Parrafo */
+.divParrafo {
+    margin: 50px;
+}
+
+.googleInLaguage {
+    font-size: small;
+    text-align: center;
+    color: #222222;
+  }
+  
+  a {
+    color: #1a0dab;
+    text-decoration: none;  
+    cursor: pointer;
+  }
+
+  a:hover {
+      text-decoration: underline;
+  }
+
+/* Footer Padre de divisores: footer1 y footer2   */
+.menuInferior {
+    Display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+span.mexico {
+    position: absolute;
+    left: 20px;
+    padding: 10px
+}
+  
+span:hover {
+    cursor: text;
+}
+
+/* 1ºbarra menú inferior: País (Mexico) */
+.footer1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #f2f2f2;
+    height: 41px;
+    color: rgba(0,0,0,.54);
+    border: solid #dfdfdf;
+    border-width: .5px;
+    text-align: left;
+    display: table;
+    font-size: .95em;
+}
+
+/* 2ºbarra menú inferior: */
+.footer2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    width: 100%;
+    border: solid #dfdfdf;
+    border-width: .5px;
+    height: 41px;
+    font-size: .80em;
+}
+
+
+.finalD {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.ladoDer:active, .ladoIz:active {
+    color: red;
+}
+
+.finalIz {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.ladoDer, .ladoIz {
+    padding: 15px;
+    text-decoration: none;
+    color: #666666;
+}
+
+.ladoDer:hover, .ladoIz:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
