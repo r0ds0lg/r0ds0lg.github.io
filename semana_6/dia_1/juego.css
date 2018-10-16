@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box; 
+  }
+
+body {
+    font-family: 'Unkempt', cursive;
+    margin: 0;
+    background-image: url(imagenes/fondo.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#poderes {
+    display: flex;
+    flex-direction: column;
+}
+
+.piedra, .papel, .tijera {
+    width: 100px;
+    height: 100px;
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    /* font-family: 'Indie Flower', cursive; */
+    font-size: 2em;
+    font-weight: 700;
+}
