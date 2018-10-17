@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="juego.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unkempt:400,700" rel="stylesheet">
+    <link rel="icon" href="headstone.ico">
+    <title>Piedra papel o tijera</title>
+</head>
+<body>
+    <header id="superior">
+        <div class="lapida"> 
+                <img class="lapida" src="imagenes/logoJuego.png"> 
+        </div>
+        <div id="ribbon">
+                <h1 class="bannerCinta">¡Bienvenido!</h1> 
+        </div> 
+    </header>
+    <div class="divcentro">
+        <div id=ataques>
+            <img class="piedra" src="imagenes/rock.png">
+            <img class="papel" src="imagenes/paper.png">
+            <img class="tijera" src="imagenes/scissors.png">
+        </div>
+        <div id="ventanas" class="centro">
+            <img class="windowR" src="imagenes/ventanaIzq.png">
+            <img class="windowL" src="imagenes/ventanaDer.png">
+        </div>
+        <!-- <div class="batalla">
+            <img class="match" src="imagenes/match.png">
+        </div> -->
+    </div>
+<footer>
+    <div class="contengoInstrucciones">
+        <p class="guia">Instrucciones</p>
+        <p class="instrucciones" >Piedra destruye tijera (gana Piedra)
+        </br>
+        Tijera corta papel (gana Tijera)
+        </br>
+        Papel envuelve piedra (gana Papel)
+        </p>
+
+    </div>
+    <div class="contengoContador">
+            <span class="contador">0-0</span>
+            <div class="divContador"> </div>
+    </div>
+    <button id="boton1" class="jugadores">1 </br> Jugador </button>
+    <button id="boton2" class="jugadores">2 </br> Jugadores </button>
+</footer>
+<script src="juego.js"></script>    
+</body>
+</html>
