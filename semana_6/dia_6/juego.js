@@ -20,8 +20,6 @@ function toggleBtnJuega(){
 
 document.querySelector('.botonJugar').addEventListener('click', iniciarJuego)
 
-
-
 // REFERENCIAS html document
 
 //botones ataques jugador 1
@@ -34,8 +32,7 @@ let btnPiedraOp = document.querySelector('#rockOp');
 let btnPapelOp = document.querySelector('#paperOp');
 let btnTijeraOp = document.querySelector('#scissorsOp');
 
-
-
+//Funciones eliminan clases de Seleccion para ataques
 function eliminaClaseSelecIZ () {
   btnPiedra.classList.remove('selecIz');
   btnPapel.classList.remove('selecIz');
@@ -86,7 +83,6 @@ let finPartida = ['¡Ganaste partida!', 'Perdiste partida'];
 //variables Score que aparecen en el contador
 let score1 = 0;
 let score2 = 0;
-
 
 //funciones incremento Contador
 function incrementarContadorPlayer1(){
