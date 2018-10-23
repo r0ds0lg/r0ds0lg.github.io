@@ -77,6 +77,77 @@ function jugar(e) {
   } 
 }
 
+
+//Juegan DOS 
+//Variables JUGADORES y Arreglos con ATAQUES
+let opcionJugador = null;
+let opcionOponente = null;
+let ataquesJ = [btnPiedra, btnPapel, btnTijera];
+let ataquesO = [btnPiedraOp, btnPapel, btnTijera];
+
+btnPiedra.addEventListener('click', ataqueJugador);
+btnPapel.addEventListener('click', ataqueJugador);
+btnTijera.addEventListener('click', ataqueJugador);
+
+
+btnPiedraOp.addEventListener('click', ataqueOponente);
+btnPapelOp.addEventListener('click', ataqueOponente);
+btnTijeraOp.addEventListener('click', ataqueOponente);
+
+
+function ataqueJugador (e) {
+  if (oponente.classList.contains('active')) {
+  opcionJugador = e.target.getAttribute('id') + "Op";
+  eliminaClaseSelecIZ();
+  eliminaClaseSelecDer();
+  quitarEventosOponente();
+  e.target.classList.add('selecIz');
+  setTimeout(function () {
+    e.target.classList.remove('selecIz')}, 500);
+  jueganDos()
+ }
+}
+
+function ataqueOponente (e) {
+  if (oponente.classList.contains('active')) {
+    opcionOponente = e.target.getAttribute('id');
+    eliminaClaseSelecDer();
+    eliminaClaseSelecIZ();
+    quitarEventosJugador();
+    e.target.classList.add('selecDer');
+    setTimeout(function () {
+      e.target.classList.remove('selecDer')}, 500);
+    jueganDos()
+  }
+}
+   
+
+
+//Juego
+function jueganDos() {
+  if (opcionJugador !== null && opcionOponente !== null ) {
+    //arreglo leyenda estatus de la partida
+    const leyendaResultado = ['Gana Fantasma', 'Empate', 'Gana Muerte'];
+
+ //descifrar ganador  
+    if (opcionJugador === opcionOponente) {
+      document.querySelector('h1').innerText = leyendaResultado[1];
+    } else if ((opcionJugador === 'rockOp' && opcionOponente === 'scissorsOp') || (opcionJugador === 'scissorsOp' && opcionOponente=== 'paperOp')|| (opcionJugador === 'paperOp' && opcionOponente === 'rockOp')) {
+      document.querySelector('h1').innerText = leyendaResultado[0];
+      incrementarContadorPlayer1()
+    } else {
+      document.querySelector('h1').innerText = leyendaResultado[2];
+      incrementarContadorOponente() 
+    }
+    resetAtaques()
+  }
+}
+
+function resetAtaques () {
+  opcionJugador = null;
+  opcionOponente = null;
+}
+
 //arreglo leyenda Fin Partida
 let finPartida = ['¡Ganaste partida!', 'Perdiste partida'];
 
@@ -186,22 +257,6 @@ let jugadorFantasta = document.querySelector('.player1')
 let jugadorMuerte = document.querySelector('.player2');
 
 
-/*APUNTES:
-
-Obtener id segun click ataque JUGADOR1
-// btnPiedra.addEventListener('click', jugar);
-// btnPapel.addEventListener('click', jugar);
-// btnTijera.addEventListener('click', jugar);
-
-Obtener id segun click ataque OPONENTE
-// btnPiedraOp.addEventListener('click', jugar);
-// btnPapelOp.addEventListener('click', jugar);
-// btnTijeraOp.addEventListener('click', jugar);
-
-Arreglo resultado Match
-// let leyendaResultado = ['Ganaste', 'Empate', 'Perdiste']; */
-
-//Funcion que arroja el ID del elemento al que se le dio click
 
 
 
