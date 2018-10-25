@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box; 
+}
+
+/* Imagen de fondo */
+html {
+  background-image: url(images/fondo.jpg);
+  height: 100%;
+  overflow: hidden;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Khand', sans-serif;
+  color: black;
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+}
+
+h1 {
+  align-self: flex-end
+}
+
+#titulo {
+  display: flex;
+  position: relative;
+}
+
+.logoSerie {
+  position: absolute;
+  height: 150px;
+  left: 10px;
+  z-index: 1;
+}
+
+.gun {
+  height: 180px;
+  position: absolute;
+  right: 15px;
+}
+
+.centralCard{
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  margin: 1%;
+}
+
+
+.portal {
+  position: absolute;
+  width: 500px;
+  height: 160px;
+  background-image: repeating-radial-gradient(#2f8603d1, #9ea706 10%, #107b54d1 15%);
+  border-radius: 50%;
+  margin-top: 4.8%;
+}
+
+.card {
+  display:flex;
+  position: fixed;
+  margin-top: 10%;
+  height: 300px;
+  flex-wrap: wrap;
+  width: 350px;
+  background-image: url("images/cardTemplateGray.png");
+  background-size: cover;
+}
+
+.imageCard {
+  position: absolute;
+  right: 10px;
+  height: 120px;
+  bottom: 3%;
+  z-index: 3;
+}
+
+.contengoNumyNam {
+  display: flex;
+  position: relative;
+  width: 270px;
+  padding: 40px;
+  z-index: 4;
+  height: 50px;
+}
+
+.numeroId {
+  font-size: 3em;
+  color: white;
+  position: absolute;  
+}
+
+.name {
+  position: absolute;
+  font-size: 1.5em;
+  color: black;
+  top: 75px;
+  width: 330px;
+  text-align: center;
+  text-decoration-line: overline;
+  text-decoration-color: #636369;
+}
+
+.contengoInfo {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  z-index: 3;
+  margin: 5%;
+  margin-top: 25%;
+  font-size: 1.4em;
+  color: #636369;
+}
+
+
+footer{
+  display: flex;
+  position: relative;
+}
+
+.boxMeeseek {
+  height: 100px;
+  position: fixed;
+  bottom: 35px;
+  left: 48%;
+  z-index: 0;
+}
