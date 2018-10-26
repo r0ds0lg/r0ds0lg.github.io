@@ -33,7 +33,7 @@ let respuesta = function(objeto) {
   document.body.innerHTML +=
   `
   <div> 
-    <img src= "${objeto.results[9].image}">
+    <img class="imageCard" src= "${objeto.results[9].image}">
     <dl>
     <dt><b>Character Name:</b> ${objeto.results[9].name}</dt>
       <dd><b>Status:</b> ${objeto.results[9].status}</dd>

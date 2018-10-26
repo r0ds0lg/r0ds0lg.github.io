@@ -5,7 +5,7 @@
 /* Imagen de fondo */
 html {
   background-image: url(images/fondo.jpg);
-  height: 100%;
+  min-height: 100%;
   overflow: hidden;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -63,16 +63,25 @@ h1 {
   margin-top: 4.8%;
 }
 
-.card {
-  display:flex;
-  position: fixed;
-  margin-top: 10%;
-  height: 300px;
+.contengoCards {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  position: relative;
+  width: 1200px;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: auto;
+}
+
+.card {
+  height: 300px;
   width: 350px;
   background-image: url("images/cardTemplateGray.png");
   background-size: cover;
 }
+
+
 
 .imageCard {
   position: absolute;
@@ -80,6 +89,7 @@ h1 {
   height: 120px;
   bottom: 3%;
   z-index: 3;
+  border-radius: 10%;
 }
 
 .contengoNumyNam {
