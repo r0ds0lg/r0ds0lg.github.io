@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box; 
+}
+
+/* Imagen de fondo */
+html {
+  background-image: url(images/fondo.jpg);
+  min-height: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: cover;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto;
+  font-family: 'Khand', sans-serif;
+  color: black;
+  width: 100%;
+  align-content: center;
+}
+
+/* header */
+#titulo {
+  display: grid;
+  grid-template-columns: 62%;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-gap: 40px;
+}
+
+.logoSerie {
+  height: 150px;
+  margin: 1.5%;
+  z-index: 1;
+}
+
+.filter{
+  
+  font-family: 'Khand', sans-serif;
+  font-size: 1.1em;
+  color: aliceblue;
+  z-index: 1;
+  width: auto;
+  height: 30px;
+  background-color: transparent;
+  outline-color: #64a706;
+  margin: auto;
+}
+
+.gun {
+  height: 170px;
+}
+
+/* body */
+.centralCard{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.portal {
+  width: 840px;
+  height: 230px;
+  background-image: repeating-radial-gradient(#2f8603d1, #9ea706 10%, #107b54d1 15%);
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* Card template */
+.contengoCards {
+  display: grid;
+  grid-template-columns: repeat(3, 350px) ;
+  grid-auto-flow: row;
+  grid-gap: 1px 40px;
+  margin: -132px;
+}
+
+.card {
+  width: 350px;
+  background-image: url("images/cardTemplateGray.png");
+  background-size: cover;
+  top: 250px;
+  margin-bottom: 50px;
+}
+
+.imageCard {
+ height: 120px;
+  z-index: 3;
+  border-radius: 10%;
+  margin-left:100px;
+  margin-top: 23px;
+}
+
+.contengoNumyNam {
+  display: grid;
+  width: 270px;
+  padding: 40px;
+  z-index: 4;
+  height: 50px;
+  grid-template-columns: 10%;
+  grid-auto-flow: column;
+}
+
+.numeroId {
+  font-size: 3em;
+  color: white;
+  margin-left: -52%  
+}
+
+.name {
+  font-size: 1.5em;
+  color: black;
+  width: 300px;
+  text-align: center;
+  text-decoration-line: overline;
+  text-decoration-color: #636369;
+  margin: auto;
+  padding: 8%;
+}
+
+.contengoInfo {
+  display: grid;
+  grid-row: repeat(3, 100px);
+  align-content: start;
+  z-index: 3;
+  margin: 5%;
+  margin-top: -40px;
+  font-size: 1.4em;
+  color: #636369;
+}
+
+/* Footer */
+.contengoBotones {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 30px;
+  justify-content: center;
+  margin-top: 130px;
+}
+
+.boxMeeseek {
+  height: 100px;
+  z-index: 0;
+  margin: auto;
+}
+
+.botones {
+  height: 80px;
+  margin: auto;
+}
+
+.botones:hover {
+  border: solid;
+  border-color: #6c2d4e;
+  border-width: .5em;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
