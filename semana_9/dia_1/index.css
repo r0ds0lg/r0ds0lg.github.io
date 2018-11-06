@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #CCC;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor div {
+  padding: 10px;
+  background: white;
+  border: 1px solid #AAA;
+  cursor: pointer;
+}
+
+.contenedor img {
+  width: 100%;
+}
+
+/* Fondo del modal */
+.modalBackground {
+  display: none;
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.800);
+  z-index: 2;
+  justify-content: center;
+}
+
+.modalBackground.visible {
+  display: flex;
+}
+
+.openModal{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 50vw;
+  height: 60vh;
+  justify-content: center;
+  top: 20%;
+  border: 12px solid #ffffff;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("file:///Users/grs/Desktop/ejercicios/semana_9/dia_1/imagenes/1.jpg");
+}
+
+
+/* boton cerrar modal  */
+.closeBtn {
+  position: absolute;
+  width:  50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  background-color: rgba(34, 33, 33, 0.934);
+  outline: none;
+  cursor: pointer;
+  border: transparent;
+  top: -25px;
+  right: -24px;
+  align-self: flex-end;
+  font-size: 1em;
+
+}
+
+.closeBtn:hover {
+  transition: 500;
+  border: solid white;
+  border-width: 1.5px;
+
+
+}
