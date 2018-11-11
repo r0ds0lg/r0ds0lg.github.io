@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    display: block;
+    position: relative;
+    margin: 0;
+    background: rgb(102, 100, 100);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222; 
+}  
+
+p {
+    margin: 0;
+    padding: 30px;
+    line-height: 1.5em;
+    text-align: left;
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 1;}
+    50% {opacity: 0;}
+    to {opacity:1;}
+}
+
+.principal {
+    padding-top: 190px;
+    margin: 100px auto;
+    width: 948.5px;
+    height: 200px;
+    background-image: url(images/tabPrincipal.png);
+}
+
+.contengoTabs {
+    display: grid;
+    grid-auto-flow: column;
+    z-index: 1;
+    width: 940px;
+    margin: auto;
+}
+
+.menu {
+ height: 80px;
+ z-index: 1;
+ display: flex;
+ justify-content: center;
+ color: #ffffff;
+ align-self: center;
+ padding: 20px;
+ font-size: 2em;
+}
+
+.menu:hover {
+    cursor: pointer;
+    transition: 500;
+    opacity: .9;
+}
+
+/* .textoTab {
+    color: #ffffff;
+    align-self: center;
+    font-size: 2em;
+} */
+
+/* Imagenes Tabs */
+.tab1 {
+    background-image: url(images/tab1.png);
+}
+
+.tab2 {
+    background-image: url(images/tab2.png);
+}
+
+.tab3 {
+    background-image: url(images/tab3.png);
+}
+
+.tab4 {
+    background-image: url(images/tab4.png);
+}
+
+.content {
+    display: none;
+    width: 940px;
+    margin: auto;
+    color: white;
+    cursor: default;
+}
+
+
+.activeCont {
+    display: block;
+}
+
+.activeMenu {
+    font-size: 3.4em;
+}
+
+.info1{
+    background-color: #ff730f;
+}
+
+.info2 {
+    background-color: #f5c103;
+}
+
+.info3 {
+    background-color: #c72094;
+}
+
+.info4 {
+    background-color: #3097b5;
+}

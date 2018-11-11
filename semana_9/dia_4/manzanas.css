@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: silver;
+    color: #333;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+h1 {
+    text-align: center;
+    margin: .5em;
+    font-size: 2em;
+    font-weight: normal;
+}   
+
+.contenedor {
+    width: 90%;
+    max-width: 35em;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .1);
+    margin: 2em auto;
+    display: none;
+}
+
+.contenedor.active {
+    display: block;
+}
+
+.mensajes {
+    height: 350px;
+    padding: 5px;
+}
+
+.cuadro input {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, .1);
+    outline: none;
+    width: 100%;
+    border: none;
+}
+
+.login, .logout {
+    background: white;
+    padding: 15px;
+    cursor: pointer;
+    width: 200px;
+    font-size: 2em;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.mensaje {
+    border-bottom: solid 1px rgba(0, 0, 0, .1);
+    padding: 3px 5px;
+    font-size: 1.2em;
+}
+
+.mensaje div:first-child {
+    font-size: 1.2em;
+    color: #444;
+}
+  
+.mensaje div:last-child {
+    font-family: 'Poor Story'
+}

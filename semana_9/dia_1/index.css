@@ -32,6 +32,7 @@ h1 {
 
 .contenedor img {
   width: 100%;
+  cursor: zoom-in;
 }
 
 /* Fondo del modal */

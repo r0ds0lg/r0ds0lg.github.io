@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="manzanas.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+</head>
+<body>
+  <h1>Chat con 🍎 🍏 🍎 </h1>
+<div class="auth">
+  <div class="login">Login</div>
+  <div class="logout">Logout</div>
+</div>
+  <div class="contenedor">
+    <div class="mensajes">
+      <div class="mensaje">
+        
+      </div>
+    </div>
+    <div class="cuadro">
+      <input type="text">
+    </div>
+  </div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDke-5rizNnhqCvD4jhvEH3_mHujkM_hkw",
+    authDomain: "probando-8aa46.firebaseapp.com",
+    databaseURL: "https://probando-8aa46.firebaseio.com",
+    projectId: "probando-8aa46",
+    storageBucket: "probando-8aa46.appspot.com",
+    messagingSenderId: "247065731109"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="manzanas.js"></script>
+</body>
+</html>

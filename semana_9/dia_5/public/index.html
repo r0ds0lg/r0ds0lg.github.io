@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Storage</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Firebase 🔥 Storage</h1>
+  
+  <div class="contenedor">
+    <div class="form">
+      <input type="file" accept="image/*">
+      <div class="guardar">💾</div>
+    </div>    
+    <div class="imagen">
+      <img src="">
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAn3pibi5n-WKyyFhwr6vV_z8YSUVD_fak",
+      authDomain: "central-ejemplos.firebaseapp.com",
+      databaseURL: "https://central-ejemplos.firebaseio.com",
+      projectId: "central-ejemplos",
+      storageBucket: "central-ejemplos.appspot.com",
+      messagingSenderId: "605612046029"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>
